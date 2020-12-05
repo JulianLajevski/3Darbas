@@ -35,6 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.hideShowCheckBox = new System.Windows.Forms.CheckBox();
+            this.anonimLogInButton = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
@@ -91,7 +92,7 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(122, 340);
+            this.loginButton.Location = new System.Drawing.Point(122, 357);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(141, 47);
             this.loginButton.TabIndex = 11;
@@ -112,12 +113,27 @@
             this.hideShowCheckBox.UseVisualStyleBackColor = true;
             this.hideShowCheckBox.CheckedChanged += new System.EventHandler(this.hideShowCheckBox_CheckedChanged);
             // 
+            // anonimLogInButton
+            // 
+            this.anonimLogInButton.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.anonimLogInButton.AutoSize = true;
+            this.anonimLogInButton.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.anonimLogInButton.LinkColor = System.Drawing.Color.White;
+            this.anonimLogInButton.Location = new System.Drawing.Point(84, 300);
+            this.anonimLogInButton.Name = "anonimLogInButton";
+            this.anonimLogInButton.Size = new System.Drawing.Size(123, 22);
+            this.anonimLogInButton.TabIndex = 13;
+            this.anonimLogInButton.TabStop = true;
+            this.anonimLogInButton.Text = "Anonym login";
+            this.anonimLogInButton.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.anonimLogInButton_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(385, 431);
+            this.Controls.Add(this.anonimLogInButton);
             this.Controls.Add(this.hideShowCheckBox);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label3);
@@ -142,5 +158,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.CheckBox hideShowCheckBox;
+        private System.Windows.Forms.LinkLabel anonimLogInButton;
     }
 }

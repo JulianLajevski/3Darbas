@@ -10,6 +10,7 @@ namespace _3Darbas
 {
     public class UserClass : PersonClass
     {
+        public int id;
         private string username;
         private string password;
         private Bitmap profilePicture;
@@ -51,6 +52,14 @@ namespace _3Darbas
         public Bitmap GetProfilePicture()
         {
             return profilePicture;
+        }
+        public void setId(int value)
+        {
+            this.id = value;
+        }
+        public int getId()
+        {
+            return id;
         }
     }
 }

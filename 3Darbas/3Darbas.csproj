@@ -48,6 +48,7 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -92,20 +93,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewItemForm.Designer.cs">
+      <DependentUpon>AddNewItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comment.cs" />
+    <Compile Include="AdminFeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFeedForm.Designer.cs">
+      <DependentUpon>AdminFeedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminsHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminsHomeForm.Designer.cs">
       <DependentUpon>AdminsHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnonymFeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnonymFeedForm.Designer.cs">
+      <DependentUpon>AnonymFeedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs" />
     <Compile Include="clearUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="clearUsersForm.Designer.cs">
       <DependentUpon>clearUsersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CommentWriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentWriteForm.Designer.cs">
+      <DependentUpon>CommentWriteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DbConnection.cs" />
     <Compile Include="EnumConverters.cs" />
+    <Compile Include="FavoriteItem.cs" />
+    <Compile Include="FavoriteItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoriteItemsForm.Designer.cs">
+      <DependentUpon>FavoriteItemsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +152,55 @@
     <Compile Include="InfoChangeForm.Designer.cs">
       <DependentUpon>InfoChangeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemAdmin.Designer.cs">
+      <DependentUpon>ItemAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemAnonim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemAnonim.Designer.cs">
+      <DependentUpon>ItemAnonim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="itemCommentAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemCommentAdmin.Designer.cs">
+      <DependentUpon>itemCommentAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsRepository.cs" />
+    <Compile Include="itemComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemComment.Designer.cs">
+      <DependentUpon>itemComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCommentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemCommentsForm.Designer.cs">
+      <DependentUpon>ItemCommentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemUsercs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemUsercs.Designer.cs">
+      <DependentUpon>ItemUsercs.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCattegoryInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCattegoryInputForm.Designer.cs">
+      <DependentUpon>NewCattegoryInputForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonClass.cs" />
     <Compile Include="Program.cs" />
@@ -134,6 +212,12 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserClass.cs" />
+    <Compile Include="UserFeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserFeedForm.Designer.cs">
+      <DependentUpon>UserFeedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRepository.cs" />
     <Compile Include="UsersHomeForm.cs">
       <SubType>Form</SubType>
@@ -142,11 +226,26 @@
       <DependentUpon>UsersHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserType.cs" />
+    <EmbeddedResource Include="AddNewItemForm.resx">
+      <DependentUpon>AddNewItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFeedForm.resx">
+      <DependentUpon>AdminFeedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminsHomeForm.resx">
       <DependentUpon>AdminsHomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnonymFeedForm.resx">
+      <DependentUpon>AnonymFeedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clearUsersForm.resx">
       <DependentUpon>clearUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentWriteForm.resx">
+      <DependentUpon>CommentWriteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoriteItemsForm.resx">
+      <DependentUpon>FavoriteItemsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -154,8 +253,29 @@
     <EmbeddedResource Include="InfoChangeForm.resx">
       <DependentUpon>InfoChangeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItemAdmin.resx">
+      <DependentUpon>ItemAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemAnonim.resx">
+      <DependentUpon>ItemAnonim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemComment.resx">
+      <DependentUpon>itemComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemCommentAdmin.resx">
+      <DependentUpon>itemCommentAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemCommentsForm.resx">
+      <DependentUpon>ItemCommentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemUsercs.resx">
+      <DependentUpon>ItemUsercs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCattegoryInputForm.resx">
+      <DependentUpon>NewCattegoryInputForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,9 +285,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserFeedForm.resx">
+      <DependentUpon>UserFeedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsersHomeForm.resx">
       <DependentUpon>UsersHomeForm.cs</DependentUpon>
@@ -185,6 +309,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

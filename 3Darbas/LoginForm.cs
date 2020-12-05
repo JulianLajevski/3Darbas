@@ -13,6 +13,7 @@ namespace _3Darbas
     public partial class LoginForm : Form
     {
         private UserRepository userRepository = new UserRepository();
+        UserClass loggedInUser = null;
         public LoginForm()
         {
             InitializeComponent();
@@ -23,16 +24,16 @@ namespace _3Darbas
             try
             {
 
-                UserClass loggedInUser = userRepository.Login(usernameTextBox.Text, passwordTextBox.Text);
+                loggedInUser = userRepository.Login(usernameTextBox.Text, passwordTextBox.Text);
                 switch (loggedInUser.UserType)
                 {
                     case UserType.Admin:
-                        AdminsHomeForm adminHomeForm = new AdminsHomeForm(loggedInUser);
-                        adminHomeForm.ShowDialog();
+                        AdminFeedForm adminFeedForm = new AdminFeedForm(loggedInUser);
+                        adminFeedForm.ShowDialog();
                         break;
                     case UserType.BasicUser:
-                        UsersHomeForm userHomeForm = new UsersHomeForm(loggedInUser);
-                        userHomeForm.ShowDialog();
+                        UserFeedForm userFeedForm = new UserFeedForm(loggedInUser);
+                        userFeedForm.ShowDialog();
                         break;
                 }
                 this.Close();
@@ -55,6 +56,12 @@ namespace _3Darbas
             }
         }
 
-        
+        private void anonimLogInButton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            AnonymFeedForm anonymFeedForm = new AnonymFeedForm(loggedInUser);
+            anonymFeedForm.ShowDialog();
+            this.Close();
+        }
     }
 }

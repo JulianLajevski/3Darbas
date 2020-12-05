@@ -28,29 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logoutButton = new System.Windows.Forms.Button();
             this.helloText = new System.Windows.Forms.Label();
             this.changeInfoButton = new System.Windows.Forms.Button();
             this.infoButton = new System.Windows.Forms.Button();
             this.allUsersButton = new System.Windows.Forms.Button();
             this.changePictureButton = new System.Windows.Forms.Button();
             this.profilePictureBox = new System.Windows.Forms.PictureBox();
+            this.logoutButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profilePictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.logoutButton.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(631, 376);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(141, 47);
-            this.logoutButton.TabIndex = 36;
-            this.logoutButton.Text = "LOGOUT";
-            this.logoutButton.UseVisualStyleBackColor = false;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // helloText
             // 
@@ -127,6 +113,20 @@
             this.profilePictureBox.TabIndex = 39;
             this.profilePictureBox.TabStop = false;
             // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Location = new System.Drawing.Point(631, 376);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(141, 47);
+            this.logoutButton.TabIndex = 36;
+            this.logoutButton.Text = "FEED";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
             // AdminsHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -151,13 +151,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Label helloText;
         private System.Windows.Forms.Button changeInfoButton;
         private System.Windows.Forms.Button infoButton;
         private System.Windows.Forms.Button allUsersButton;
         private System.Windows.Forms.Button changePictureButton;
         private System.Windows.Forms.PictureBox profilePictureBox;
+        private System.Windows.Forms.Button logoutButton;
     }
 }

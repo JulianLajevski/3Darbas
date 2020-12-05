@@ -66,5 +66,11 @@ namespace _3Darbas
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+
+        private void feedButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
     }
 }

@@ -22,17 +22,8 @@ namespace _3Darbas
         {
             try
             {
-                if(userRadioButton.Checked)
-                {
                     userRepository.AddBasicUser(nameTextBox.Text, surnameTextBox.Text, birthdayPicker.Value, usernameTextBox.Text, passwordTextBox.Text); 
                     this.Close();
-                }
-                if (adminRadioButton.Checked)
-                {
-                    userRepository.AddAdminUser(nameTextBox.Text, surnameTextBox.Text, birthdayPicker.Value, usernameTextBox.Text, passwordTextBox.Text);
-                    this.Close();
-                }
-                
             }
             catch (Exception exc)
             {

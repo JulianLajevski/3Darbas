@@ -40,8 +40,6 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
-            this.userRadioButton = new System.Windows.Forms.RadioButton();
-            this.adminRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label6
@@ -151,7 +149,7 @@
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(112, 316);
+            this.registerButton.Location = new System.Drawing.Point(350, 230);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(141, 47);
             this.registerButton.TabIndex = 23;
@@ -159,40 +157,12 @@
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
-            // userRadioButton
-            // 
-            this.userRadioButton.AutoSize = true;
-            this.userRadioButton.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userRadioButton.ForeColor = System.Drawing.Color.White;
-            this.userRadioButton.Location = new System.Drawing.Point(332, 230);
-            this.userRadioButton.Name = "userRadioButton";
-            this.userRadioButton.Size = new System.Drawing.Size(90, 26);
-            this.userRadioButton.TabIndex = 27;
-            this.userRadioButton.TabStop = true;
-            this.userRadioButton.Text = "As User";
-            this.userRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // adminRadioButton
-            // 
-            this.adminRadioButton.AutoSize = true;
-            this.adminRadioButton.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminRadioButton.ForeColor = System.Drawing.Color.White;
-            this.adminRadioButton.Location = new System.Drawing.Point(332, 271);
-            this.adminRadioButton.Name = "adminRadioButton";
-            this.adminRadioButton.Size = new System.Drawing.Size(109, 26);
-            this.adminRadioButton.TabIndex = 28;
-            this.adminRadioButton.TabStop = true;
-            this.adminRadioButton.Text = "As Admin";
-            this.adminRadioButton.UseVisualStyleBackColor = true;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(586, 409);
-            this.Controls.Add(this.adminRadioButton);
-            this.Controls.Add(this.userRadioButton);
+            this.ClientSize = new System.Drawing.Size(586, 341);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -227,7 +197,5 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button registerButton;
-        private System.Windows.Forms.RadioButton userRadioButton;
-        private System.Windows.Forms.RadioButton adminRadioButton;
     }
 }
