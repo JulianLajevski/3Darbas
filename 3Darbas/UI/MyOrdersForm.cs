@@ -68,6 +68,7 @@ namespace _3Darbas.UI
                 string image = reader["Image"].ToString();
                 Item item = new Item(id, title, description, image, price);
                 ItemUsercs userItem = new ItemUsercs(item, user);
+                userItem.hidePriceText();
                 orderItemPanel.Controls.Add(userItem);
 
             }
@@ -107,10 +108,7 @@ namespace _3Darbas.UI
         private double getOrderPrice(int orderId)
         {
             double price = 0;
-            string sql = "SELECT SUM (Items.Price) AS 'Price' " +
-                        "FROM((Items " +
-                        "INNER JOIN Order_Items ON Order_Items.Item_Id = Items.Id) " + 
-                        "INNER JOIN Orders ON Orders.Id = Order_Items.Order_Id) WHERE Order_Id = @orderId";
+            string sql = "SELECT Orders.Price FROM Orders WHERE Orders.Id = @orderId";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@orderId", orderId);
             conn.Open();

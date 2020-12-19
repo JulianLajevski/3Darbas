@@ -18,6 +18,7 @@ namespace _3Darbas
         //ItemsRepository itemsRepository = new ItemsRepository();
         CartRepository cartRepository = new CartRepository();
         UserClass user;
+        double currentCartPrice = 0;
         public CartListForm(UserClass user)
         {
             InitializeComponent();
@@ -61,6 +62,7 @@ namespace _3Darbas
         private void CartRepository_OnCurrentPrice(object sender, ItemEventArgs e)
         {
             priceTextView.Text = e.Price.ToString();
+            currentCartPrice = e.Price;
         }
 
         private void buyButton_Click(object sender, EventArgs e)
@@ -72,10 +74,11 @@ namespace _3Darbas
                 "Suppression", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (confirmation == DialogResult.Yes)
             {
-                string sql = "INSERT INTO Orders (Date, User_Id) OUTPUT INSERTED.Id VALUES (@date, @userId)";
+                string sql = "INSERT INTO Orders (Date, User_Id, Price) OUTPUT INSERTED.Id VALUES (@date, @userId, @price)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@date", DateTime.Now);
                 cmd.Parameters.AddWithValue("@userId", user.id);
+                cmd.Parameters.AddWithValue("@price", currentCartPrice);
                 conn.Open();
                 int newOrderId = (int)cmd.ExecuteScalar();
                 conn.Close();

@@ -21,7 +21,7 @@ namespace _3Darbas.Back
 
         public List<Item> getCartItems(UserClass user)
         {
-            List<Item> cartItemList;
+            
 
             List<Item> cartItemsList = new List<Item>();
             try
@@ -69,15 +69,15 @@ namespace _3Darbas.Back
                  currentPrice = double.Parse(reader["Price"].ToString());
             }
             conn.Close();
-            /*if (checkUserBonus(user.id))
+            if (checkUserBonus(user.id))
             {
                 if (user.GetDaysUntilBirthday() <= 7 || user.GetDaysUntilBirthday() >= 356)
                 {
                     currentPrice = currentPrice * 0.9;
-                    MessageBox.Show("You got 10% for all cart!");
                 }
-            }*/
+            }
             OnCurrentPrice(this, new ItemEventArgs(currentPrice));
+
         }
 
         public Boolean checkUserBonus(int userId)

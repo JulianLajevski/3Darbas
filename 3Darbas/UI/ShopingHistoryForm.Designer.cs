@@ -41,7 +41,8 @@ namespace _3Darbas
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(358, 46);
+            this.label2.Location = new System.Drawing.Point(15, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 26);
             this.label2.TabIndex = 41;
@@ -52,7 +53,8 @@ namespace _3Darbas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(44, 18);
+            this.label1.Location = new System.Drawing.Point(16, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 19);
             this.label1.TabIndex = 40;
@@ -64,41 +66,46 @@ namespace _3Darbas
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.backButton.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backButton.ForeColor = System.Drawing.Color.White;
-            this.backButton.Location = new System.Drawing.Point(645, 25);
+            this.backButton.Location = new System.Drawing.Point(468, 25);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(112, 47);
+            this.backButton.Size = new System.Drawing.Size(84, 38);
             this.backButton.TabIndex = 39;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // orderItemPanel
             // 
             this.orderItemPanel.AutoScroll = true;
-            this.orderItemPanel.Location = new System.Drawing.Point(47, 98);
+            this.orderItemPanel.Location = new System.Drawing.Point(20, 188);
+            this.orderItemPanel.Margin = new System.Windows.Forms.Padding(2);
             this.orderItemPanel.Name = "orderItemPanel";
-            this.orderItemPanel.Size = new System.Drawing.Size(710, 334);
+            this.orderItemPanel.Size = new System.Drawing.Size(532, 271);
             this.orderItemPanel.TabIndex = 38;
             // 
             // ordersDropList
             // 
             this.ordersDropList.FormattingEnabled = true;
-            this.ordersDropList.Location = new System.Drawing.Point(47, 46);
+            this.ordersDropList.Location = new System.Drawing.Point(18, 42);
+            this.ordersDropList.Margin = new System.Windows.Forms.Padding(2);
             this.ordersDropList.Name = "ordersDropList";
-            this.ordersDropList.Size = new System.Drawing.Size(268, 24);
+            this.ordersDropList.Size = new System.Drawing.Size(202, 21);
             this.ordersDropList.TabIndex = 37;
             this.ordersDropList.SelectedIndexChanged += new System.EventHandler(this.selectedIndexChanged);
             // 
             // ShopingHistoryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(574, 480);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.orderItemPanel);
             this.Controls.Add(this.ordersDropList);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ShopingHistoryForm";
             this.Text = "ShopingHistoryForm";
             this.ResumeLayout(false);

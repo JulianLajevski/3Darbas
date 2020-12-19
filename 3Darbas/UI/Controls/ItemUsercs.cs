@@ -124,6 +124,12 @@ namespace _3Darbas
         {
             commentLabelButton.Show();
         }
+
+        public void hidePriceText()
+        {
+            label3.Hide();
+            priceTextView.Hide();
+        }
         private void allCommentsLabelButton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ItemCommentsForm commentsForm = new ItemCommentsForm(user, item);
@@ -189,10 +195,12 @@ namespace _3Darbas
 
         private void buyButton_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO Orders (Date, User_Id) OUTPUT INSERTED.Id VALUES (@date, @userId)";
+            double price = item.Price;
+            string sql = "INSERT INTO Orders (Date, User_Id, Price) OUTPUT INSERTED.Id VALUES (@date, @userId, @price)";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@date", DateTime.Now);
             cmd.Parameters.AddWithValue("@userId", user.id);
+            cmd.Parameters.AddWithValue("@price", price);
             conn.Open();
            int newOrderId = (int) cmd.ExecuteScalar();
             conn.Close();
