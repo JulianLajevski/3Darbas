@@ -103,7 +103,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button addItemButton;
-        private System.Windows.Forms.Button addCattegoryButton;
+        protected System.Windows.Forms.Button addItemButton;
+        protected System.Windows.Forms.Button addCattegoryButton;
     }
 }

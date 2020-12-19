@@ -171,5 +171,37 @@ namespace _3Darbas
             
         }
 
+        public List<Item> getCartItems(int userId)
+        {
+            List<Item> cartItemsList = new List<Item>();
+            try
+            {
+                string sql = "select * from Items Where Id IN (select Item_Id from cart_items where User_Id = @userId)";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@userId", userId);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int id = int.Parse(reader["id"].ToString());
+                    string title = reader["Title"].ToString();
+                    double price = double.Parse(reader["Price"].ToString());
+                    string description = reader["Description"].ToString();
+                    string image = reader["Image"].ToString();
+                    cartItemsList.Add(new Item(id, title, description, image, price));
+                }
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            return cartItemsList;
+        }
+
+        
+
     }
 }

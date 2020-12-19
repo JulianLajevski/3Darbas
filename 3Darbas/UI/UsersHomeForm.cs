@@ -31,7 +31,7 @@ namespace _3Darbas
         {
             MessageBox.Show($"Name: {user.GetName()}\nSurname: {user.GetSurname()}\n" +
                 $"BirthDate: {user.GetBirthdate()}\nUsername: {user.getUsername()}\nPassword: {user.getPassword()}\n" +
-                $"User Type: {user.UserType}");
+                $"User Type: {user.UserType}\nDays Until Birthday: {user.GetDaysUntilBirthday()}");
         }
 
         private void changeInfoButton_Click(object sender, EventArgs e)
@@ -72,5 +72,7 @@ namespace _3Darbas
             this.Close();
             
         }
+
+        
     }
 }

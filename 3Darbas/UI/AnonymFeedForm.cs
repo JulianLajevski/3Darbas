@@ -36,6 +36,7 @@ namespace _3Darbas
                 categoryButton.Click += CategoryButton_Click;
                 categoryButton.Tag = category;
                 topFlowPanel.Controls.Add(categoryButton);
+                
             }
 
         }
@@ -76,7 +77,15 @@ namespace _3Darbas
                     mainFlowPanel.Controls.Add(itemAdmin);
                 }
             }
-            
+            if (user != null && user.UserType == UserType.Financier)
+            {
+                foreach (Item item in category.Items)
+                {
+                    ItemUsercs itemUser = new ItemUsercs(item, user);
+                    mainFlowPanel.Controls.Add(itemUser);
+                }
+            }
+
         }
 
         private void loginButton_Click(object sender, EventArgs e)

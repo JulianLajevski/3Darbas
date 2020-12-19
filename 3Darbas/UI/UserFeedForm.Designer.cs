@@ -33,6 +33,8 @@
             this.profileImageView = new System.Windows.Forms.PictureBox();
             this.goToProfileButton = new System.Windows.Forms.LinkLabel();
             this.favoritesButton = new System.Windows.Forms.Button();
+            this.cartButton = new System.Windows.Forms.Button();
+            this.myOrdersButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.profileImageView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +94,41 @@
             this.favoritesButton.UseVisualStyleBackColor = false;
             this.favoritesButton.Click += new System.EventHandler(this.favoritesButton_Click);
             // 
+            // cartButton
+            // 
+            this.cartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.cartButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cartButton.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cartButton.ForeColor = System.Drawing.Color.White;
+            this.cartButton.Location = new System.Drawing.Point(772, 214);
+            this.cartButton.Name = "cartButton";
+            this.cartButton.Size = new System.Drawing.Size(141, 47);
+            this.cartButton.TabIndex = 19;
+            this.cartButton.Text = "My Cart";
+            this.cartButton.UseVisualStyleBackColor = false;
+            this.cartButton.Click += new System.EventHandler(this.cartButton_Click);
+            // 
+            // myOrdersButton
+            // 
+            this.myOrdersButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.myOrdersButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.myOrdersButton.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myOrdersButton.ForeColor = System.Drawing.Color.White;
+            this.myOrdersButton.Location = new System.Drawing.Point(772, 282);
+            this.myOrdersButton.Name = "myOrdersButton";
+            this.myOrdersButton.Size = new System.Drawing.Size(141, 47);
+            this.myOrdersButton.TabIndex = 20;
+            this.myOrdersButton.Text = "My Orders";
+            this.myOrdersButton.UseVisualStyleBackColor = false;
+            this.myOrdersButton.Click += new System.EventHandler(this.myOrdersButton_Click);
+            // 
             // UserFeedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(937, 468);
+            this.Controls.Add(this.myOrdersButton);
+            this.Controls.Add(this.cartButton);
             this.Controls.Add(this.favoritesButton);
             this.Controls.Add(this.goToProfileButton);
             this.Controls.Add(this.profileImageView);
@@ -106,6 +138,8 @@
             this.Controls.SetChildIndex(this.profileImageView, 0);
             this.Controls.SetChildIndex(this.goToProfileButton, 0);
             this.Controls.SetChildIndex(this.favoritesButton, 0);
+            this.Controls.SetChildIndex(this.cartButton, 0);
+            this.Controls.SetChildIndex(this.myOrdersButton, 0);
             ((System.ComponentModel.ISupportInitialize)(this.profileImageView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,5 +152,7 @@
         protected System.Windows.Forms.PictureBox profileImageView;
         protected System.Windows.Forms.LinkLabel goToProfileButton;
         protected System.Windows.Forms.Button favoritesButton;
+        protected System.Windows.Forms.Button cartButton;
+        protected System.Windows.Forms.Button myOrdersButton;
     }
 }

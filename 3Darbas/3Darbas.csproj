@@ -93,188 +93,234 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewItemForm.cs">
+    <Compile Include="Back\CartRepository.cs" />
+    <Compile Include="Back\ItemEventArgs.cs" />
+    <Compile Include="Back\Order.cs" />
+    <Compile Include="Back\OrderRepository.cs" />
+    <Compile Include="UI\AddNewItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewItemForm.Designer.cs">
+    <Compile Include="UI\AddNewItemForm.Designer.cs">
       <DependentUpon>AddNewItemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Comment.cs" />
-    <Compile Include="AdminFeedForm.cs">
+    <Compile Include="UI\CartListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminFeedForm.Designer.cs">
+    <Compile Include="UI\CartListForm.Designer.cs">
+      <DependentUpon>CartListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Back\Comment.cs" />
+    <Compile Include="UI\AdminFeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminFeedForm.Designer.cs">
       <DependentUpon>AdminFeedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminsHomeForm.cs">
+    <Compile Include="UI\AdminsHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminsHomeForm.Designer.cs">
+    <Compile Include="UI\AdminsHomeForm.Designer.cs">
       <DependentUpon>AdminsHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnonymFeedForm.cs">
+    <Compile Include="UI\AnonymFeedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnonymFeedForm.Designer.cs">
+    <Compile Include="UI\AnonymFeedForm.Designer.cs">
       <DependentUpon>AnonymFeedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs" />
-    <Compile Include="clearUsersForm.cs">
+    <Compile Include="Back\Category.cs" />
+    <Compile Include="UI\clearUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="clearUsersForm.Designer.cs">
+    <Compile Include="UI\clearUsersForm.Designer.cs">
       <DependentUpon>clearUsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CommentWriteForm.cs">
+    <Compile Include="UI\CommentWriteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CommentWriteForm.Designer.cs">
+    <Compile Include="UI\CommentWriteForm.Designer.cs">
       <DependentUpon>CommentWriteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DbConnection.cs" />
-    <Compile Include="EnumConverters.cs" />
-    <Compile Include="FavoriteItem.cs" />
-    <Compile Include="FavoriteItemsForm.cs">
+    <Compile Include="Back\DbConnection.cs" />
+    <Compile Include="Back\EnumConverters.cs" />
+    <Compile Include="Back\FavoriteItem.cs" />
+    <Compile Include="UI\FavoriteItemsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FavoriteItemsForm.Designer.cs">
+    <Compile Include="UI\FavoriteItemsForm.Designer.cs">
       <DependentUpon>FavoriteItemsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="UI\FinancierFeedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="UI\FinancierFeedForm.Designer.cs">
+      <DependentUpon>FinancierFeedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoChangeForm.cs">
+    <Compile Include="UI\InfoChangeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoChangeForm.Designer.cs">
+    <Compile Include="UI\InfoChangeForm.Designer.cs">
       <DependentUpon>InfoChangeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Item.cs" />
-    <Compile Include="ItemAdmin.cs">
+    <Compile Include="Back\Item.cs" />
+    <Compile Include="UI\Controls\ItemAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ItemAdmin.Designer.cs">
+    <Compile Include="UI\Controls\ItemAdmin.Designer.cs">
       <DependentUpon>ItemAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemAnonim.cs">
+    <Compile Include="UI\Controls\ItemAnonim.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ItemAnonim.Designer.cs">
+    <Compile Include="UI\Controls\ItemAnonim.Designer.cs">
       <DependentUpon>ItemAnonim.cs</DependentUpon>
     </Compile>
-    <Compile Include="itemCommentAdmin.cs">
+    <Compile Include="UI\Controls\itemCommentAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemCommentAdmin.Designer.cs">
+    <Compile Include="UI\Controls\itemCommentAdmin.Designer.cs">
       <DependentUpon>itemCommentAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemsRepository.cs" />
-    <Compile Include="itemComment.cs">
+    <Compile Include="Back\ItemsRepository.cs" />
+    <Compile Include="UI\Controls\itemComment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="itemComment.Designer.cs">
+    <Compile Include="UI\Controls\itemComment.Designer.cs">
       <DependentUpon>itemComment.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemCommentsForm.cs">
+    <Compile Include="UI\ItemCommentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItemCommentsForm.Designer.cs">
+    <Compile Include="UI\ItemCommentsForm.Designer.cs">
       <DependentUpon>ItemCommentsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemUsercs.cs">
+    <Compile Include="UI\Controls\ItemUsercs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ItemUsercs.Designer.cs">
+    <Compile Include="UI\Controls\ItemUsercs.Designer.cs">
       <DependentUpon>ItemUsercs.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="UI\ItemViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="UI\ItemViewForm.Designer.cs">
+      <DependentUpon>ItemViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewCattegoryInputForm.cs">
+    <Compile Include="UI\MyOrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewCattegoryInputForm.Designer.cs">
+    <Compile Include="UI\MyOrdersForm.Designer.cs">
+      <DependentUpon>MyOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NewCattegoryInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\NewCattegoryInputForm.Designer.cs">
       <DependentUpon>NewCattegoryInputForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonClass.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Back\PersonClass.cs" />
+    <Compile Include="Back\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="UI\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="UI\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserClass.cs" />
-    <Compile Include="UserFeedForm.cs">
+    <Compile Include="UI\ShopingHistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserFeedForm.Designer.cs">
+    <Compile Include="UI\ShopingHistoryForm.Designer.cs">
+      <DependentUpon>ShopingHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Back\UserClass.cs" />
+    <Compile Include="UI\UserFeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserFeedForm.Designer.cs">
       <DependentUpon>UserFeedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserRepository.cs" />
-    <Compile Include="UsersHomeForm.cs">
+    <Compile Include="Back\UserRepository.cs" />
+    <Compile Include="UI\UsersHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsersHomeForm.Designer.cs">
+    <Compile Include="UI\UsersHomeForm.Designer.cs">
       <DependentUpon>UsersHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserType.cs" />
-    <EmbeddedResource Include="AddNewItemForm.resx">
+    <Compile Include="Back\UserType.cs" />
+    <EmbeddedResource Include="UI\AddNewItemForm.resx">
       <DependentUpon>AddNewItemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminFeedForm.resx">
+    <EmbeddedResource Include="UI\AdminFeedForm.resx">
       <DependentUpon>AdminFeedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminsHomeForm.resx">
+    <EmbeddedResource Include="UI\AdminsHomeForm.resx">
       <DependentUpon>AdminsHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnonymFeedForm.resx">
+    <EmbeddedResource Include="UI\AnonymFeedForm.resx">
       <DependentUpon>AnonymFeedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="clearUsersForm.resx">
+    <EmbeddedResource Include="UI\CartListForm.resx">
+      <DependentUpon>CartListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\clearUsersForm.resx">
       <DependentUpon>clearUsersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommentWriteForm.resx">
+    <EmbeddedResource Include="UI\CommentWriteForm.resx">
       <DependentUpon>CommentWriteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FavoriteItemsForm.resx">
+    <EmbeddedResource Include="UI\FavoriteItemsForm.resx">
       <DependentUpon>FavoriteItemsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="UI\FinancierFeedForm.resx">
+      <DependentUpon>FinancierFeedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoChangeForm.resx">
+    <EmbeddedResource Include="UI\InfoChangeForm.resx">
       <DependentUpon>InfoChangeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemAdmin.resx">
+    <EmbeddedResource Include="UI\Controls\ItemAdmin.resx">
       <DependentUpon>ItemAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemAnonim.resx">
+    <EmbeddedResource Include="UI\Controls\ItemAnonim.resx">
       <DependentUpon>ItemAnonim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemComment.resx">
+    <EmbeddedResource Include="UI\Controls\itemComment.resx">
       <DependentUpon>itemComment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="itemCommentAdmin.resx">
+    <EmbeddedResource Include="UI\Controls\itemCommentAdmin.resx">
       <DependentUpon>itemCommentAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemCommentsForm.resx">
+    <EmbeddedResource Include="UI\ItemCommentsForm.resx">
       <DependentUpon>ItemCommentsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemUsercs.resx">
+    <EmbeddedResource Include="UI\Controls\ItemUsercs.resx">
       <DependentUpon>ItemUsercs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="UI\ItemViewForm.resx">
+      <DependentUpon>ItemViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewCattegoryInputForm.resx">
+    <EmbeddedResource Include="UI\MyOrdersForm.resx">
+      <DependentUpon>MyOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\NewCattegoryInputForm.resx">
       <DependentUpon>NewCattegoryInputForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -287,13 +333,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="UI\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserFeedForm.resx">
+    <EmbeddedResource Include="UI\ShopingHistoryForm.resx">
+      <DependentUpon>ShopingHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFeedForm.resx">
       <DependentUpon>UserFeedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsersHomeForm.resx">
+    <EmbeddedResource Include="UI\UsersHomeForm.resx">
       <DependentUpon>UsersHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -333,6 +382,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_ic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commentWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

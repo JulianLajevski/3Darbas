@@ -32,8 +32,20 @@
             this.commentLabelButton = new System.Windows.Forms.LinkLabel();
             this.removeLabelButton = new System.Windows.Forms.LinkLabel();
             this.allCommentsLabelButton = new System.Windows.Forms.LinkLabel();
+            this.addLinkLabelCart = new System.Windows.Forms.LinkLabel();
+            this.removeLinkLabelCart = new System.Windows.Forms.LinkLabel();
+            this.buyButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.itemImageBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buyButton)).BeginInit();
             this.SuspendLayout();
+            // 
+            // itemImageBox
+            // 
+            this.itemImageBox.Click += new System.EventHandler(this.itemImageBox_Click);
+            // 
+            // descriptionTextView
+            // 
+            this.descriptionTextView.Size = new System.Drawing.Size(365, 86);
             // 
             // addLabelButton
             // 
@@ -98,10 +110,56 @@
             this.allCommentsLabelButton.Text = "    All Comments";
             this.allCommentsLabelButton.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.allCommentsLabelButton_LinkClicked);
             // 
+            // addLinkLabelCart
+            // 
+            this.addLinkLabelCart.ActiveLinkColor = System.Drawing.Color.SteelBlue;
+            this.addLinkLabelCart.AutoSize = true;
+            this.addLinkLabelCart.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addLinkLabelCart.Image = global::_3Darbas.Properties.Resources.cart_ic;
+            this.addLinkLabelCart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.addLinkLabelCart.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.addLinkLabelCart.Location = new System.Drawing.Point(401, 167);
+            this.addLinkLabelCart.Name = "addLinkLabelCart";
+            this.addLinkLabelCart.Size = new System.Drawing.Size(86, 22);
+            this.addLinkLabelCart.TabIndex = 9;
+            this.addLinkLabelCart.TabStop = true;
+            this.addLinkLabelCart.Text = "    To cart";
+            this.addLinkLabelCart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.addLinkLabelCart_LinkClicked);
+            // 
+            // removeLinkLabelCart
+            // 
+            this.removeLinkLabelCart.ActiveLinkColor = System.Drawing.Color.SteelBlue;
+            this.removeLinkLabelCart.AutoSize = true;
+            this.removeLinkLabelCart.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeLinkLabelCart.Image = global::_3Darbas.Properties.Resources.cart_ic;
+            this.removeLinkLabelCart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.removeLinkLabelCart.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.removeLinkLabelCart.Location = new System.Drawing.Point(401, 167);
+            this.removeLinkLabelCart.Name = "removeLinkLabelCart";
+            this.removeLinkLabelCart.Size = new System.Drawing.Size(94, 22);
+            this.removeLinkLabelCart.TabIndex = 10;
+            this.removeLinkLabelCart.TabStop = true;
+            this.removeLinkLabelCart.Text = "    Remove";
+            this.removeLinkLabelCart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.removeLinkLabelCart_LinkClicked);
+            // 
+            // buyButton
+            // 
+            this.buyButton.Image = global::_3Darbas.Properties.Resources.money_bag__1_;
+            this.buyButton.Location = new System.Drawing.Point(574, 71);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(75, 65);
+            this.buyButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buyButton.TabIndex = 11;
+            this.buyButton.TabStop = false;
+            this.buyButton.Click += new System.EventHandler(this.buyButton_Click);
+            // 
             // ItemUsercs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buyButton);
+            this.Controls.Add(this.removeLinkLabelCart);
+            this.Controls.Add(this.addLinkLabelCart);
             this.Controls.Add(this.allCommentsLabelButton);
             this.Controls.Add(this.removeLabelButton);
             this.Controls.Add(this.commentLabelButton);
@@ -116,7 +174,11 @@
             this.Controls.SetChildIndex(this.commentLabelButton, 0);
             this.Controls.SetChildIndex(this.removeLabelButton, 0);
             this.Controls.SetChildIndex(this.allCommentsLabelButton, 0);
+            this.Controls.SetChildIndex(this.addLinkLabelCart, 0);
+            this.Controls.SetChildIndex(this.removeLinkLabelCart, 0);
+            this.Controls.SetChildIndex(this.buyButton, 0);
             ((System.ComponentModel.ISupportInitialize)(this.itemImageBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buyButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +190,8 @@
         protected System.Windows.Forms.LinkLabel commentLabelButton;
         protected System.Windows.Forms.LinkLabel removeLabelButton;
         protected System.Windows.Forms.LinkLabel allCommentsLabelButton;
+        protected System.Windows.Forms.LinkLabel addLinkLabelCart;
+        protected System.Windows.Forms.LinkLabel removeLinkLabelCart;
+        private System.Windows.Forms.PictureBox buyButton;
     }
 }

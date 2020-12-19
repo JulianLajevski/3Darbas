@@ -20,6 +20,10 @@ namespace _3Darbas
             favoritesButton.Hide();
             this.user = user;
         }
+        public AdminFeedForm() 
+        {
+            InitializeComponent();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

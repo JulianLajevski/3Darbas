@@ -13,7 +13,8 @@ namespace _3Darbas
     enum UserType
     {
         BasicUser = 1,
-        Admin = 2
+        Admin = 2,
+        Financier =3
     }
 
     

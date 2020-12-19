@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _3Darbas.Back;
 
 namespace _3Darbas
 {
    public class Item
     {
+        public event EventHandler<ItemEventArgs> OnPriceShow;
+        
         public int Id { get; private set; }
 
         public string Title { get; private set; }
@@ -40,6 +43,11 @@ namespace _3Darbas
         public void setFavItems(List<Item> items)
         {
             favItemList = items;
+        }
+
+        public void triggerPriceEvent()
+        {
+            OnPriceShow(this, new ItemEventArgs(199.9));
         }
     }
 }

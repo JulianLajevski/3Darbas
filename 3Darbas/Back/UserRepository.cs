@@ -37,7 +37,7 @@ namespace _3Darbas
                 int id = EnumConverters.getUserTypeID(user.UserType);
                 cmd2.Parameters.AddWithValue("@userType", id);
                 cmd2.Parameters.AddWithValue("@image", "C:/Users/Admin/Downloads/icon.png");
-                conn.Open();
+                conn.Open();    
                 cmd2.ExecuteNonQuery();
                 conn.Close();
 

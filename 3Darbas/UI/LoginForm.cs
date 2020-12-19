@@ -35,6 +35,10 @@ namespace _3Darbas
                         UserFeedForm userFeedForm = new UserFeedForm(loggedInUser);
                         userFeedForm.ShowDialog();
                         break;
+                    case UserType.Financier:
+                        FinancierFeedForm financierForm = new FinancierFeedForm(loggedInUser);
+                        financierForm.ShowDialog();
+                        break;
                 }
                 this.Close();
             }

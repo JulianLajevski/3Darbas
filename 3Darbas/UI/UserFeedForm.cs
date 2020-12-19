@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _3Darbas.UI;
 
 namespace _3Darbas
 {
@@ -28,7 +29,7 @@ namespace _3Darbas
 
         private void goToProfileButton_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(user.UserType == UserType.BasicUser)
+            if(user.UserType == UserType.BasicUser || user.UserType == UserType.Financier)
             {
                 
                 UsersHomeForm userHomeForm = new UsersHomeForm(user);
@@ -48,6 +49,16 @@ namespace _3Darbas
             favItemsForm.ShowDialog();
         }
 
-        
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            CartListForm cartForm = new CartListForm(user);
+            cartForm.ShowDialog();
+        }
+
+        private void myOrdersButton_Click(object sender, EventArgs e)
+        {
+            MyOrdersForm myOrdersForm = new MyOrdersForm(user);
+            myOrdersForm.ShowDialog();
+        }
     }
 }

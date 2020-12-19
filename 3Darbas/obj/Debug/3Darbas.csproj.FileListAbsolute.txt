@@ -52,3 +52,8 @@ C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\3Darbas.csproj.CoreCompile
 C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\3Darbas.csproj.CopyComplete
 C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\3Darbas.exe
 C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\3Darbas.pdb
+C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.FinancierFeedForm.resources
+C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.CartListForm.resources
+C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.ItemViewForm.resources
+C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.UI.MyOrdersForm.resources
+C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.ShopingHistoryForm.resources
