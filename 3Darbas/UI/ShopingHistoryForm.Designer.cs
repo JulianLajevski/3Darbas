@@ -34,6 +34,7 @@ namespace _3Darbas
             this.backButton = new System.Windows.Forms.Button();
             this.orderItemPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ordersDropList = new System.Windows.Forms.ComboBox();
+            this.jsonButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -94,12 +95,28 @@ namespace _3Darbas
             this.ordersDropList.TabIndex = 37;
             this.ordersDropList.SelectedIndexChanged += new System.EventHandler(this.selectedIndexChanged);
             // 
+            // jsonButton
+            // 
+            this.jsonButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(110)))), ((int)(((byte)(165)))));
+            this.jsonButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.jsonButton.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jsonButton.ForeColor = System.Drawing.Color.White;
+            this.jsonButton.Location = new System.Drawing.Point(468, 127);
+            this.jsonButton.Margin = new System.Windows.Forms.Padding(2);
+            this.jsonButton.Name = "jsonButton";
+            this.jsonButton.Size = new System.Drawing.Size(84, 38);
+            this.jsonButton.TabIndex = 42;
+            this.jsonButton.Text = "To Json";
+            this.jsonButton.UseVisualStyleBackColor = false;
+            this.jsonButton.Click += new System.EventHandler(this.jsonButton_Click);
+            // 
             // ShopingHistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(574, 480);
+            this.Controls.Add(this.jsonButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.backButton);
@@ -120,5 +137,6 @@ namespace _3Darbas
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.FlowLayoutPanel orderItemPanel;
         private System.Windows.Forms.ComboBox ordersDropList;
+        private System.Windows.Forms.Button jsonButton;
     }
 }

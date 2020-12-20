@@ -87,6 +87,7 @@ namespace _3Darbas
                 {
                     insertItemOrder(newOrderId, item);
                 }
+                removeBonus();
             }
         }
 
@@ -103,7 +104,15 @@ namespace _3Darbas
             conn.Close();
         }
 
-        
-
+        private void removeBonus()
+        {
+                string sql = "UPDATE User_Bonus SET Value = 0 " +
+                             "WHERE UserId = @userId";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@userId", user.id);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using _3Darbas.Back;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace _3Darbas
 {
@@ -16,6 +18,7 @@ namespace _3Darbas
     {
         private SqlConnection conn;
         private OrderRepository orderRepository = new OrderRepository();
+        int orderId = 0;
         public ShopingHistoryForm()
         {
             InitializeComponent();
@@ -35,7 +38,7 @@ namespace _3Darbas
         {
             orderItemPanel.Controls.Clear();
 
-            int orderId = int.Parse(ordersDropList.SelectedItem.ToString());
+             orderId = int.Parse(ordersDropList.SelectedItem.ToString());
             string sql = "SELECT Items.Id, Items.Title, Items.Price, Items.Description, Items.Image FROM (((Items " +
                         "INNER JOIN Order_Items ON Order_Items.Item_Id = Items.Id )" +
                         "INNER JOIN Orders ON Order_Items.Order_Id = Orders.Id)" +
@@ -59,14 +62,15 @@ namespace _3Darbas
 
             }
             conn.Close();
-            label2.Text = getOrderInfo(orderId);
+            Order order = getOrderInfo(orderId);
+            label2.Text = "Order Nr: " + order.Id.ToString() + "\nDate: " + order.Date + "\nPrice: " + order.Price.ToString() + "\nCustemer: " + order.Name + " " + order.Surname;
         }
 
-        private string getOrderInfo(int orderId)
+        private Order getOrderInfo(int orderId)
         {
-            string orderInfo = null;
-            string orderPrice = getOrderPrice(orderId).ToString();
-            string sql = "SELECT Orders.Id, Orders.Date, Users.Name, Users.Surname FROM ((Orders " +
+            Order order = null;
+            double orderPrice = getOrderPrice(orderId);
+            string sql = "SELECT Users.User_ID, Orders.Id, Orders.Date, Users.Name, Users.Surname FROM ((Orders " +
                          "INNER JOIN Users ON Users.User_ID = Orders.User_Id)) WHERE Orders.Id = @orderId";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@orderId", orderId);
@@ -75,16 +79,17 @@ namespace _3Darbas
 
             while (reader.Read())
             {
+                int userId = int.Parse(reader["User_ID"].ToString());
+                int orderID = int.Parse(reader["Id"].ToString());
                 DateTime dateTime = DateTime.Parse(reader["Date"].ToString());
                 string date = dateTime.ToString("yyyy-MM-dd");
                 string Name = reader["Name"].ToString();
                 string Surname = reader["Surname"].ToString();
 
-                orderInfo = "Order Nr: " + orderId.ToString() + "\nDate: " + date + "\nPrice: " + orderPrice + "\nCustemer: " + Name + " " + Surname;
-
+                order = new Order(orderID, date, userId, orderPrice, Name, Surname);
             }
             conn.Close();
-            return orderInfo;
+            return order;
         }
         private double getOrderPrice(int orderId)
         {
@@ -107,6 +112,18 @@ namespace _3Darbas
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void jsonButton_Click(object sender, EventArgs e)
+        {
+
+            Order order = getOrderInfo(orderId);
+            
+            string JsonOutPut = JsonConvert.SerializeObject(order);
+            
+            StreamWriter File = new StreamWriter("Json.txt", true);
+            File.Write(JsonOutPut + "\n\n");
+            File.Close();
         }
     }
 }

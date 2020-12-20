@@ -57,3 +57,5 @@ C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.CartListForm.reso
 C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.ItemViewForm.resources
 C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.UI.MyOrdersForm.resources
 C:\Users\Admin\source\repos\3Darbas\3Darbas\obj\Debug\_3Darbas.ShopingHistoryForm.resources
+C:\Users\Admin\source\repos\3Darbas\3Darbas\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\3Darbas\3Darbas\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,4 @@
+{"Id":38,"Date":"2020-12-19","UserId":1,"Price":1844.99,"Name":"Julian","Surname":"Lajevski"}
+
+{"Id":39,"Date":"2020-12-20","UserId":15,"Price":1790.0,"Name":"Tony","Surname":"Parker"}
+
